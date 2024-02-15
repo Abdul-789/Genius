@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="test service.css"/>
+  <title>Genius Motor Vehicle - 2 Wheeler Sales and Service</title>
+</head>
+<body>
+  <header>
+    <h1>Genius Motor Vehicle</h1>
+    <h2>2 Wheeler Sales and Service</h2>
+  </header>
+  <form action="/submit_form_endpoint" method="post">
+    <label for="customerName">Customer Name:</label><br>
+    <input type="text" id="customerName" name="customerName" required><br>
+
+    <label for="mobileNumber">Mobile Number:</label><br>
+    <input type="text" id="mobileNumber" name="mobileNumber" required><br>
+
+    <label for="vehicleName">Vehicle Name:</label><br>
+    <input type="text" id="vehicleName" name="vehicleName" required><br>
+
+    <label for="vehicleNumber">Vehicle Number:</label><br>
+    <input type="text" id="vehicleNumber" name="vehicleNumber" required><br>
+
+    <label for="meterReading">Meter Reading:</label><br>
+    <input type="number" id="meterReading" name="meterReading" required><br>
+
+    <label for="nextOilChange">Next Oil Change:</label><br>
+    <input type="text" id="nextOilChange" name="nextOilChange" required><br>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Item</th>
+          <th>Amount</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Engine Oil</td>
+          <td><input type="text" name="engineOilAmount"></td>
+        </tr>
+        <tr>
+          <td>Water Wash</td>
+          <td><input type="text" name="waterWashAmount"></td>
+        </tr>
+        <tr>
+          <td>Labour Charges</td>
+          <td><input type="text" name="labourChargesAmount"></td>
+        </tr>
+        <tr>
+          <td colspan="2"><br></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h4>Spare Parts</h4>
+    <table>
+      <thead>
+      <tbody>
+      <tr>
+          <script>
+function addItem() {
+    // Create new row with item and amount input fields
+    var newRow = document.createElement("div");
+    newRow.classList.add("row");
+
+    var newItem = document.createElement("input");
+    newItem.type = "text";
+    newItem.name = "item";
+    newItem.placeholder = "Enter item";
+    newItem.classList.add("input-field");
+
+    var newAmount = document.createElement("input");
+    newAmount.type = "text";
+    newAmount.name = "amount";
+    newAmount.placeholder = "Enter amount";
+    newAmount.classList.add("input-field");
+
+    // Append input fields to the new row
+    newRow.appendChild(newItem);
+    newRow.appendChild(newAmount);
+
+    // Append the new row to the container div
+    var container = document.getElementById("container");
+    container.appendChild(newRow);
+}
+</script>
+    <div class="container">
+<form>
+<div id="container">
+    <!-- Initial row with item and amount input fields -->
+    <div class="row">
+        <input type="text" name="item" placeholder="Enter item" class="input-field">
+        <input type="text" name="amount" placeholder="Enter amount" class="input-field">
+    </div>
+</div>
+<!-- Button to add more input fields -->
+<button type="button" onclick="addItem()">Add Item</button>
+</form>
+</div>
+        </tr>
+        <td>Total Amount</td>
+          <td><input type="text" name="totalAmount" readonly></td>
+      </thead>
+    </tbody>
+</table>
+  <input type="submit" value="Submit">
+</html>
