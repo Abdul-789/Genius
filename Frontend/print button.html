@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Genius Motor Vehicle - 2 Wheeler Sales and Service</title>
+  <style media="print">
+    header, footer {
+      display: none;
+    }
+    form {
+      padding: 0;
+    }
+    input[type="submit"] {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <form id="serviceForm" action="/submit_form_endpoint" method="post">
+    <!-- Form fields here -->
+    <button type="button" onclick="printForm()">Print</button>
+  </form>
+  
+  <script>
+    function printForm() {
+      window.print();
+    }
+  </script>
+</body>
+</html>

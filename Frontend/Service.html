@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Genius Motor Vehicle - 2 Wheeler Sales and Service</title>
+  </head>
+<body>
+  <style>
+  header {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 10px 0;
+    }
+    nav {
+      background-color: #f4f4f4;
+      padding: 10px;
+    }
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+    nav ul li {
+      display: inline;
+      margin-right: 20px;
+    }
+    nav ul li a {
+      text-decoration: none;
+      color: #333;
+    }
+    nav ul li a:hover {
+      color: #666;
+    }
+  </style>
+  <header>
+    <h1>Genius Motor Vehicle</h1>
+    <h2>2 Wheeler Sales and Service</h2>
+  </header>
+  <nav>
+    <ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="./2 Wheeler Sales.html">Sales</a></li>
+      <li><a href="./2 Wheeler Purchase.html">Purchase</a></li>
+      <li><a href="./Service.html">Service</a></li>
+      <li><a href="./login.html">Login</a></li>
+      <li><a href="./signup.html">Signup</a></li>
+    </ul>
+  </nav>
+  <h2>2 Wheeler Service Bill</h2>
+  <form action="/submit_form_endpoint" method="post">
+    <label for="customerName">Customer Name:</label><br>
+    <input type="text" id="customerName" name="customerName" required><br><br>
+
+    <label for="mobileNumber">Mobile Number:</label><br>
+    <input type="text" id="mobileNumber" name="mobileNumber" required><br><br>
+
+    <label for="vehicleName">Vehicle Name:</label><br>
+    <input type="text" id="vehicleName" name="vehicleName" required><br><br>
+
+    <label for="vehicleNumber">Vehicle Number:</label><br>
+    <input type="text" id="vehicleNumber" name="vehicleNumber" required><br><br>
+
+    <label for="meterReading">Meter Reading:</label><br>
+    <input type="number" id="meterReading" name="meterReading" required><br><br>
+
+    <label for="nextOilChange">Next Oil Change:</label><br>
+    <input type="text" id="nextOilChange" name="nextOilChange" required><br><br>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Item</th>
+          <th>Amount</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Engine Oil</td>
+          <td><input type="text" name="engineOilAmount"></td>
+        </tr>
+        <tr>
+          <td>Water Wash</td>
+          <td><input type="text" name="waterWashAmount"></td>
+        </tr>
+        <tr>
+          <td>Labour Charges</td>
+          <td><input type="text" name="labourChargesAmount"></td>
+        </tr>
+        <tr>
+          <td colspan="2"><br></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h4>Spare Parts</h4>
+    <table>
+      <thead>
+        <tr>
+          <th>Item</th>
+          <th>Amount</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><input type="text" name="spareParts1Name"></td>
+          <td><input type="text" name="spareParts1Amount"></td>
+        </tr>
+        <tr>
+          <td><input type="text" name="spareParts2Name"></td>
+          <td><input type="text" name="spareParts2Amount"></td>
+        </tr>
+        <tr>
+          <td><input type="text" name="spareParts3Name"></td>
+          <td><input type="text" name="spareParts3Amount"></td>
+        </tr>
+        <tr>
+          <td><input type="text" name="spareParts4Name"></td>
+          <td><input type="text" name="spareParts4Amount"></td>
+        </tr>
+        <tr>
+          <td>Total Amount</td>
+          <td><input type="text" name="totalAmount" readonly></td>
+        </tr>
+        <tr>
+          <td>Advance Paid</td>
+          <td><input type="text" name="Advance Paid" readonly></td>
+        </tr>
+        <tr>
+          <td>Amount Paid</td>
+          <td><input type="text" name="Amount Paid" readonly></td>
+        </tr>
+        <tr>
+          <td>Balance</td>
+          <td><input type="text" name="Balance" readonly></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <input type="submit" value="Submit">
+  </form>
+</body>
+</html>

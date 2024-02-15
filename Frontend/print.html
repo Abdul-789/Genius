@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Genius Motor Vehicle - 2 Wheeler Sales and Service</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 5px 0;
+      font-size: 12px;
+    }
+    footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 5px 0;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      font-size: 12px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 10px;
+      font-size: 12px;
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 5px;
+      text-align: left;
+    }
+    th {
+      background-color: #f2f2f2;
+    }
+    form {
+      padding: 10px;
+    }
+    .print-hidden {
+      display: none;
+    }
+  </style>
+  <style media="print">
+    header, footer {
+      display: none;
+    }
+    form {
+      padding: 0;
+    }
+    input[type="submit"] {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h2>Genius Motor Vehicle</h2>
+    <h3>2 Wheeler Sales and Service</h3>
+  </header>
+  <form action="/submit_form_endpoint" method="post">
+    <label for="customerName">Customer Name:</label><br>
+    <input type="text" id="customerName" name="customerName" required><br><br>
+
+    <label for="mobileNumber">Mobile Number:</label><br>
+    <input type="text" id="mobileNumber" name="mobileNumber" required><br><br>
+
+    <label for="vehicleName">Vehicle Name:</label><br>
+    <input type="text" id="vehicleName" name="vehicleName" required><br><br>
+
+    <label for="vehicleNumber">Vehicle Number:</label><br>
+    <input type="text" id="vehicleNumber" name="vehicleNumber" required><br><br>
+
+    <label for="meterReading">Meter Reading:</label><br>
+    <input type="number" id="meterReading" name="meterReading" required><br><br>
+
+    <label for="nextOilChange">Next Oil Change:</label><br>
+    <input type="text" id="nextOilChange" name="nextOilChange" required><br><br>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Item</th>
+          <th>Amount</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Engine Oil</td>
+          <td><input type="text" name="engineOilAmount"></td>
+        </tr>
+        <tr>
+          <td>Water Wash</td>
+          <td><input type="text" name="waterWashAmount"></td>
+        </tr>
+        <tr>
+          <td>Labour Charges</td>
+          <td><input type="text" name="labourChargesAmount"></td>
+        </tr>
+        <tr>
+          <td colspan="2"><br></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h4>Spare Parts</h4>
+    <table>
+      <thead>
+        <tr>
+          <th>Item</th>
+          <th>Amount</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><input type="text" name="spareParts1Name"></td>
+          <td><input type="text" name="spareParts1Amount"></td>
+        </tr>
+        <tr>
+          <td><input type="text" name="spareParts2Name"></td>
+          <td><input type="text" name="spareParts2Amount"></td>
+        </tr>
+        <tr>
+          <td><input type="text" name="spareParts3Name"></td>
+          <td><input type="text" name="spareParts3Amount"></td>
+        </tr>
+        <tr>
+          <td><input type="text" name="spareParts4Name"></td>
+          <td><input type="text" name="spareParts4Amount"></td>
+        </tr>
+        <tr>
+          <td>Total Amount</td>
+          <td><input type="text" name="totalAmount" readonly></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <input type="submit" value="Submit" class="print-hidden">
+  </form>
+  <footer>Genius Motor Vehicle - 2 Wheeler Sales and Service</footer>
+</body>
+</html>
